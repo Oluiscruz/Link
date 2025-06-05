@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kaushan+Script&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --P-color: #191970;
+    --S-color: #FFDEAD;
+    --T-color: #18181D;
+    --Text-color: #FFF;
+    --title-font: 'Reddit sans', sans serif;
+}
+
+body {
+    background: linear-gradient(180deg, var(--P-color), #121234, var(--T-color));
+    height: 100vh;
+}
+
+.container {
+    font-family: var(--title-font);
+}
+
+.container .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 4px;
+}
+
+.container .header img {
+    width: 140px;
+    height: 150px;
+    border-radius: 150%;
+    margin: 18px;
+    box-shadow: 0 6px 12px #18181da3;
+}
+
+.container .header h1 {
+    color: var(--Text-color);
+    font-size: 1.7 rem;
+    margin: 4px;
+}
+
+.container .header h1 span {
+    font-family: 'Kaushan Script', sans-serif;
+}
+
+.container .header .icons {
+    margin: 8px;
+}
+
+.container .header .icons a i {
+    color: var(--Text-color);
+    font-size: 35px;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in;
+}
+
+.container .header .icons a i:hover {
+    transform: scale(0.96);
+    color: var(--T-color);
+    background-color: var(--S-color);
+}
+
+.container .main a {
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 150px;
+    margin: 12px auto;
+    list-style: none;
+    background: var(--T-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 500px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #FFDEAD;
+}
+
+.container .main a,
+.container .main  i {
+    text-decoration: none;
+    padding: 8px;
+    color: var(--Text-color);
+}
+
+.container .main a:hover {
+    background: var(--S-color);
+    color: var(--T-color);
+    transform: scale(0.96);
+}
+
+@media (max-width: 600px) {
+    .container .main a {
+        width: 95%;
+        font-size: 1rem;
+        gap: 100px;
+        padding: 8px;
+        max-width: 80%;
+    }
+
+    .container .header img {
+        width: 90px;
+        height: 95px;
+        margin: 10px;
+    }
+    .container .header {
+        margin: 10px
+    }
+
+    .container .header h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .container .main a {
+        gap: 10px;
+        font-size: 0.95rem;
+        padding: 6px;
+    }
+}
